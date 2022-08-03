@@ -12,5 +12,7 @@ public class App {
 		Bilgisayar bilgisayar = new Bilgisayar(new Hoparlor(), new Spotify());
 		bilgisayar.muzikCal(new Muzik("Mabel Matiz - Ya Bu Isler Ne", "Beni bos ver de ya bu isler ne aman aman"));
 	}
+	
+	
 
 }
