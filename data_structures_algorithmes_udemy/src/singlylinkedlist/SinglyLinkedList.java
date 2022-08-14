@@ -1,6 +1,6 @@
 package singlylinkedlist;
 
-/* Node createSinglyLinkedList(int value)
+/* NodeMyself createSinglyLinkedList(int length)
  * void insertInLinkedList(int nodeValue, int location)
  * void traverseSinglyLinkedList()
  * boolean searchNode(int nodeValue)
@@ -9,13 +9,13 @@ package singlylinkedlist;
  */
 
 public class SinglyLinkedList {
-	// Node => int value, Node next
+	// NodeMyself => int length, NodeMyself next
 	 Node head;
 	 Node tail;
 	 int size;
 	 //
 	Node createSinglyLinkedList(int nodeValue) {
-		//head = new Node();
+		//head = new NodeMyself();
 		Node node = new Node();
 		node.next = null;
 		node.value = nodeValue;
@@ -78,7 +78,7 @@ public class SinglyLinkedList {
 				tempNode = tempNode.next;
 			}
 		}
-		System.out.print("Node not found! ");
+		System.out.print("NodeMyself not found! ");
 		return false;
 	}
 	void deletionOfNode(int location) {
@@ -140,7 +140,7 @@ class Node{
 	public String toString() {
 		return new StringBuilder("Value: ")
 				.append(value)
-				.append("\nNext value: ")
+				.append("\nNext length: ")
 				.append(next == null ? "not assigned": next.value)
 				.toString();
 	}

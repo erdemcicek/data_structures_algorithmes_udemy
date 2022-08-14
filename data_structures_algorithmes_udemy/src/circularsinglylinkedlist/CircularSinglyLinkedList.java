@@ -70,7 +70,7 @@ public class CircularSinglyLinkedList {
 				}
 				tempNode = tempNode.next;
 			}
-			System.out.println("Node not found! ");
+			System.out.println("NodeMyself not found! ");
 			return false;
 		}
 		System.out.println("List does not exist yet");

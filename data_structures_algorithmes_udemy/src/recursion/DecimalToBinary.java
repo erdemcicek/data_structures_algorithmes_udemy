@@ -18,7 +18,7 @@ public class DecimalToBinary {
             binaryNumber += rem * c;
             n /= 2;
   
-            // Count used to store exponent value
+            // Count used to store exponent length
             count++;
         }
   

@@ -11,7 +11,7 @@ import java.util.Comparator;
 		myArray = {84,85,86,87,85,90,85,83,23,45,84,1,2,0}
 		firstSecond(myArray) // 90 87
 		
-		*** If there is maximum value duplicated, just skip one of them
+		*** If there is maximum length duplicated, just skip one of them
 		 */
 
 public class BestScores {
