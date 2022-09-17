@@ -14,4 +14,6 @@ public class ContainsNumber {
 		throw new IllegalArgumentException("Value " + searched + " is not found in the given array");
 	}
 
+	
+	
 }
