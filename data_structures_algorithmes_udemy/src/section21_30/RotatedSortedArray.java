@@ -14,6 +14,7 @@ public class RotatedSortedArray {
 		// output -1
 		//System.out.println(search(new int[] {1}, 0)); // -1
 		///System.out.println(findEdgeIndex(new int[] {4,5,6,7,0,1,2}, 1));
+		searching(new int[] {4,5,6,7,0,1,2}, 1);
 		
 	}
 	
@@ -58,29 +59,58 @@ public class RotatedSortedArray {
 		return left;
 	}
 	
+	private static int searching(int[] arr, int key) {
+		
+		int left = 0;
+		int right = arr.length-1;
+		int pointer = 0;
+		
+		// 4,5,6,7,0,1,2
+		
+		while(left<right) {
+			int mid = (left+right)/2;
+			System.out.println("mid " + mid);
+			
+			if(arr[mid-1]>arr[mid] && arr[mid+1]>arr[mid]) {
+				System.out.println("iff");
+				pointer = mid;
+			} else if(arr[right]>arr[mid]) {
+				System.out.println("elseif 1");
+				right = mid-1;
+			} else if(arr[left]<arr[mid]) {
+				System.out.println("elseif 2");
+				left = mid+1;
+			}
+		}
+		System.out.println(pointer);
+		left = 0;
+		right = arr.length-1;
+		return -1;
+	}
 	
 	
-	private static int search(int[] a, int key) {
+	
+	private static int search(int[] arr, int key) {
 		
 		int start = 0;
-		int end = a.length-1;
+		int end = arr.length-1;
 		
 		while(start<=end) {
 			int mid = (start+end)/2;					//  [6,7,0,1,2,3,4], target = 0  a[s] = 6 , a[mid] = 1 		else
-												//  [4,5,6,7,0,1,2], target = 0  a[s] = 4 , a[mid] = 7		if
+														//  [4,5,6,7,0,1,2], target = 0  a[s] = 4 , a[mid] = 7		if
 			
-			if(a[mid] == key) {
+			if(arr[mid] == key) {
 				return mid;
 			}
 			
-			if(a[start] <= a[mid]) {
-				if(key >= a[start] && key <= a[mid]) {
+			if(arr[start] <= arr[mid]) {
+				if(key >= arr[start] && key <= arr[mid]) {
 					end = mid-1;
 				} else {
 					start = mid+1;
 				}
 			} else { 							// (nums[s] > nums[mid])
-				if(key >= a[mid] && key <= a[end]) {
+				if(key >= arr[mid] && key <= arr[end]) {
 					start = mid+1;
 				} else {
 					end = mid-1;
