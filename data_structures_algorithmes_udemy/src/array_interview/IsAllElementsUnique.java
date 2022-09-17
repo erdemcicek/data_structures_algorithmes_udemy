@@ -14,6 +14,7 @@ public class IsAllElementsUnique {
 	}
 	
 	private static boolean isUnique(int[] arr) {
+		
 		Set<Integer> set = new HashSet<>();
 		for(int i = 0 ; i < arr.length ; i++) {
 			if(!set.add(arr[i])) return false;
