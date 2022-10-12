@@ -77,8 +77,3 @@ public class AerialReconnaissance {
 
 }
 
-//if(!treeMap.containsKey(custom.length)) {
-//treeMap.put(custom.length, 1);
-//} else {
-//treeMap.put(custom.length, treeMap.get(custom.length) + 1);
-//}

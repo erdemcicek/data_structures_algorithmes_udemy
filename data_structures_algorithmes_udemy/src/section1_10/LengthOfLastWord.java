@@ -10,6 +10,7 @@ public class LengthOfLastWord {
 	
 	private static int len(String s) {
 		String str = s.trim();
+		System.out.println(str);
 		String[] a = str.split(" ");
 		String r = a[a.length-1];
 		return r.length();
@@ -39,5 +40,5 @@ public class LengthOfLastWord {
 		
 		return count;
 	}
-
+	
 }

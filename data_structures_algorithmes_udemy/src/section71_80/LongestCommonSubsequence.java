@@ -2,6 +2,11 @@ package section71_80;
 
 public class LongestCommonSubsequence {
 	
+	public static void main(String[] args) {
+		//System.out.println(longestCommonSubsequenceRecursive("apple", "attpe"));
+		System.out.println(longestCommonSubsequenceDP("apple", "topale"));
+	}
+	
 	private static int lcs(String s1, int i, String s2, int j) {
 		
 		if(s1.length()==i || s2.length()==j) {
@@ -14,12 +19,12 @@ public class LongestCommonSubsequence {
 		}
 		
 		// case for mismatch
-		int first = lcs(s1,i,s2,j+1);
-		int second = lcs(s1,i+1,s2,j);
+		int first =  lcs(s1, i  , s2, j+1);
+		int second = lcs(s1, i+1, s2, j  );
 		return Math.max(first, second);
 	}
 	
-	private static int longestCommonSubsequence(String text1, String text2) {
+	private static int longestCommonSubsequenceRecursive(String text1, String text2) {
 		return lcs(text1,0,text2,0);
 	}
 	
